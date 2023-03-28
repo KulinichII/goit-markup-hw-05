@@ -45,7 +45,13 @@ integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8
    <h1 class="section-one-header">
             Effective Solutions for Your Business
         </h1>
-       <button class="btn" type="button">Order Service</button>
+       <button class="btn" type="button" data-modal-open>Order Service</button>
+       <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <p class="section-btn-modal"></p>
+            <button data-modal-close>close</button>
+        </div>
+       </div>
     </div>
     </section>
 
@@ -422,9 +428,6 @@ integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8
     
 </footer>
     </div>
-   
-
-
-    
+    <script src="./js/modal.js"></script>
 </body>
 </html>
