@@ -58,7 +58,7 @@ body {
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 1px 6px rgba(46, 47, 66, 0.08);
-    text-transform: uppercase;
+
 
 }
 
@@ -98,25 +98,22 @@ line-height: 1.5;
 text-decoration:none;
 letter-spacing: 0.02em;
 color: var(--main-title-color);
+position: relative;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-list__link.html::after{
+.header-list__link.carent::after{
 content: '';
-width: 48px;
+width: 100%;
 height: 4px;
 background: #404BBF;
 border-radius: 2px;
 display: block;
+bottom: -24px;
+left: 0;
+position: absolute;
 }
 
-.header-list__link.port::after{
-    content: '';
-    width: 66px;
-    height: 4px;
-    background: #404BBF;
-    border-radius: 2px;
-    display: block;
-    }
 .list{
     list-style: none;
 }
@@ -152,6 +149,7 @@ color: var(--main-title-color);
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--main-text-color); 
+    transition: clolor 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-adr-link:hover,
 .header-adr-link:focus{
@@ -181,10 +179,11 @@ color: var(--main-title-color);
     
 }
 .backdrop {
-    position: ;
+    position: fixed;
     top: 0;
     width: 100%;
     height: 100%;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), ;
    
 }
 .modal {
@@ -201,9 +200,12 @@ padding: 30px;
 } 
 .button-modal {
     display: block;
+    padding: 0;
     margin-left: auto;
+    /* align-items: center;
+    justify-content: center;
     width: 24px;
-    height: 24px;
+    height: 24px; */
 }
 .section-one-icon {
     width: 8px;
@@ -211,21 +213,22 @@ padding: 30px;
     
 
 }
-.sectio-one-link {
-    position: absolute;
+.section-one-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 background: #E7E9FC;
 border-radius: 50%;
 border: 1px solid rgba(0, 0, 0, 0.1);
+width: 24px;
+ height: 24px;
 }
 .is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
 }
-.section-one-link {
-    width: 24px;
-    height: 24px;
-}
+
 
 .section-one-header{
 font-size: 56px;
@@ -258,6 +261,8 @@ border-radius: 4px;
     padding-bottom: 16px;
     padding-left: 32px;
     border: none;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
     
     
 }
@@ -429,6 +434,7 @@ height: 40px;
     display:flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 
 }
@@ -484,13 +490,15 @@ margin-bottom: 72px;
     justify-content: center;
     border: 1px solid rgb(136, 134, 134);  
     border-radius: 4px;
-    color: #8E8F99;;
+    color: #8E8F99;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
  .section-five-icon{
     width: 104px;
     height: 56px;
     fill: currentColor;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
  .section-five-link:hover,
@@ -527,6 +535,7 @@ margin-bottom: 72px;
     display:flex;
     align-items: center;
     justify-content: center;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 
 }
@@ -606,6 +615,7 @@ margin-top: 16px;
     padding-bottom: 12px;
     padding-left: 24px;  
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 
 }
 
@@ -614,7 +624,6 @@ margin-top: 16px;
 color: #FFFFFF;
 background: #404BBF;
 border-color: transparent;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
 0px 2px 1px rgba(0, 0, 0, 0.08),
  0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -623,12 +632,15 @@ box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
 .section-list-li {
     
     width: 360px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 .section-href{
     display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.section-list-li:hover .section-baek-text {
+.section-list-li:hover .section-baek-text,
+.section-list-li:focus .section-baek-text {
     transform: translateY(0);
    
 }
@@ -649,7 +661,7 @@ color: #F4F4FD;
 background-color: #4d5ae5;
 padding-top: 40px;
 padding-right: 32px;
-padding-bottom: 162px;
+padding-bottom: 40px;
 padding-left: 32px;
 transform: translateY(100%);
 transition: transform 250ms linear;
