@@ -202,10 +202,6 @@ padding: 30px;
     display: block;
     padding: 0;
     margin-left: auto;
-    /* align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px; */
 }
 .section-one-icon {
     width: 8px;
@@ -215,6 +211,7 @@ padding: 30px;
 }
 .section-one-link {
     display: flex;
+    margin-left: auto;
     align-items: center;
     justify-content: center;
 background: #E7E9FC;
