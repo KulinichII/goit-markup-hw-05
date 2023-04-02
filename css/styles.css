@@ -114,6 +114,9 @@ position: absolute;
 background: #4d5ae5;
 
 }
+.carent {
+    color: #4D5AE5;
+}
 
 .list{
     list-style: none;
@@ -210,6 +213,10 @@ border: 1px solid rgba(0, 0, 0, 0.1);
     width: 24px;
  height: 24px;
 }
+.button-modal:hover,
+.button-modal:focus {
+    background: #404BBF;
+}
     
 .section-one-icon {
     display: flex;
@@ -221,6 +228,15 @@ width: 8px;
  height: 8px;
 
 }
+.section-one-icon:hover,
+.section-one-icon:focus {
+    fill: #FFFFFF;
+}
+.button-modal:hover .section-one-icon,
+.button-modal:focus .section-one-icon {
+    fill: #FFFFFF;
+}
+
 .is-hidden {
     opacity: 0;
     visibility: hidden;
@@ -503,7 +519,8 @@ margin-bottom: 72px;
  .section-five-link:focus {
     border-color: #4d5ae5;
  }
- .section-five-icon:hover{
+ .section-five-icon:hover,
+ .section-five-icon:focus{
     fill: #4d5ae5;
  }
 
